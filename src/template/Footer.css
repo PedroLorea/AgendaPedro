@@ -1,0 +1,11 @@
+footer {
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.logoFooter{
+    font-size: 30px;
+    color: #FFF;
+    margin-left: 20px;
+}

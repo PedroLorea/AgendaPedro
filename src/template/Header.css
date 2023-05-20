@@ -1,0 +1,15 @@
+header {
+  background-color: rgb(249, 242, 242);
+}
+
+.linguagens {
+  display: flex;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+img{
+  margin-right: 5px;
+  cursor: pointer;
+}

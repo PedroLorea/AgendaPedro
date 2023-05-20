@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
+import Agenda from './components/Agenda'
+import Home from './components/Home'
+import Header from './template/Header'
+import Footer from './template/Footer'
 import './App.css';
 
 function App() {
+
+  //Adicionar os inputs dentro de uma lista de strings, em seguida usar map para renderiza-lo
+  //Fazer paginação
+
+  const [showHome, setShowHome] = useState(true)
+  const [showAgenda, setShowAgenda] = useState(false)
+
+  const handleShowAgenda = () => {
+    setShowHome(false)
+    setShowAgenda(true)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Header></Header>
+      {showHome && <Home showAgenda={handleShowAgenda}/>}
+      {showAgenda && <Agenda />}
+      <Footer></Footer>
     </div>
   );
 }
