@@ -9,10 +9,10 @@ export default function PostIt({id, onDelete}){
 
     return (
         <div id="containerPost">
-            <textarea className="postIt"></textarea>
             <div className="barraSuperior">
                 <button className="botaoX" onClick={handleClick}>X</button>
             </div>
+            <textarea className="postIt"></textarea>
         </div>
     )
 }
