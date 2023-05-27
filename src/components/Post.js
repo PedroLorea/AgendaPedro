@@ -1,11 +1,13 @@
 import React from "react"
-import './PostIt.css'
+import './../styles/Post.css'
 
 export default function PostIt({id, onDelete}){
 
     const handleClick = () => {
         onDelete(id)
     }
+
+
 
     return (
         <div id="containerPost">

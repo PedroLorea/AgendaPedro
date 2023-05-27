@@ -1,0 +1,54 @@
+.containerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonCriar {
+    margin: 20px;
+    font-size: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 100px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.buttonCriar:hover {
+    background-color: #0056b3;
+}
+
+.buttonCriar:active {
+    filter: brightness(0.8);
+}
+
+.botaoPagina {
+    background-color: #007bff;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.botaoPagina:hover {
+    background-color: #0056b3;
+}
+
+.buttonCriar:active {
+    filter: brightness(0.8);
+}
+
+li {
+    font-size: 20px;
+}
+
+#input-item {
+    font-size: 20px;
+    padding: 10px;
+    min-width: 600px;
+    margin: 10px;
+}

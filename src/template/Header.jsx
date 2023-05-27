@@ -3,7 +3,7 @@ import './Header.css'
 import bandeiraBrasil from './../assets/bandeiraBrasil.png'
 import bandeiraEua from './../assets/bandeiraEua.png'
 
-export default function Header(){
+export default function Header() {
     return (
         <header className='header'>
             <div className='linguagens'>

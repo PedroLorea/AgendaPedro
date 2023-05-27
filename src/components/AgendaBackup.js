@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Main from './../template/Main'
 import './../styles/Agenda.css'
+import Post from "./Post"
 
 
 export default function Agenda() {
@@ -24,8 +25,6 @@ export default function Agenda() {
         setItens([])
         setItens(itensPaginados)
 
-        console.log(inicio, "=", fim, "=", itensPaginados, "=", listaItens, "=", itens)
-
         const totalPaginas = Math.ceil(listaItens.length / itensPorPagina) //Quantas paginas tem, arredonda pra cima
         const pageButtonsPaginado = []
 
@@ -45,23 +44,49 @@ export default function Agenda() {
         item.value = ''
     }
 
+    //post it
+
+    const [postIts, setPostIts] = useState([])
+
+    const criarPostIt = () => {
+        if(postIts.length < 2){
+            const novoPostIt = {
+                id: Math.random()
+            }
+            setPostIts([...postIts, novoPostIt])
+        }
+    }
+
+    const excluirPostIt = (id) => {
+        const novosPostIts = postIts.filter((postIt) => postIt.id !== id)
+        setPostIts(novosPostIts);
+    }
+
     return (
         <Main>
-            <div className="container">
-                <button className="buttonCriar" onClick={criarItem}>Criar Novo Item</button>
+            <div className="separaMain">
+                <div className="containerList">
+                    <button className="buttonCriar" onClick={criarItem}>Criar Novo Item</button>
 
-                <input type="text" id="input-item"></input>
+                    <input type="text" id="input-item"></input>
 
-                <ul>
-                    {itens.map(item => {
-                        console.log(item)
-                        return <li>{item}</li>
+                    <ul>
+                        {itens.map(item => {
+                            return <li>{item}</li>
+                        })}
+                    </ul>
+                    <div> {pageButtons} </div>
+                </div>
+                <div id="containerPosts">
+                    <button className="criarPost" onClick={criarPostIt}>+ Post-It</button>
+                    {postIts.map(postIt => {
+                        return <Post key={postIt.id} id={postIt.id} onDelete={excluirPostIt}/>
                     })}
-                </ul>
-                <div> {pageButtons} </div>
+                </div>
             </div>
         </Main>
     )
+
 
 
 }

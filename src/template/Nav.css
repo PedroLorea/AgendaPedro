@@ -1,0 +1,39 @@
+nav.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(42, 129, 206);
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+    border: 1px solid black;
+    background-color: rgb(53, 23, 160);
+    text-decoration: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav div:hover {
+    background-color: rgb(39, 17, 112);
+}
+
+nav div:active {
+    background-color: rgb(29, 13, 83);
+}
+
+.link {
+    width: 90%;
+    text-decoration: none;
+    margin-top: 11px;
+}
+
+nav div span {
+    margin-left: 10px;
+}

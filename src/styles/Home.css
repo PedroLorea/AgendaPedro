@@ -1,25 +1,25 @@
-.home{
+.home {
   display: flex;
   width: 600px;
   height: 500px;
   background-color: rgb(255, 255, 255);
-  
+
   align-items: center;
   flex-direction: column;
   border-radius: 5%;
   justify-content: center;
 
   box-shadow: 0 0 20px rgba(0, 0, 0, 10);
-  
+
 }
 
-.logoHome{
+.logoHome {
   font-size: 80px;
   color: red;
   margin-bottom: 45px;
 }
 
-.buttonEntrar{
+.buttonEntrar {
   font-size: 30px;
   background-color: #007bff;
   color: #fff;
@@ -31,4 +31,10 @@
 
 .buttonEntrar:hover {
   background-color: #0056b3;
+}
+
+.containerHome {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }

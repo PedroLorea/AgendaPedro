@@ -7,9 +7,6 @@ import './App.css';
 
 function App() {
 
-  //Adicionar os inputs dentro de uma lista de strings, em seguida usar map para renderiza-lo
-  //Fazer paginação
-
   const [showHome, setShowHome] = useState(true)
   const [showAgenda, setShowAgenda] = useState(false)
 
