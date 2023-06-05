@@ -1,0 +1,12 @@
+.flechaEsquerda, .flechaDireita {
+    max-width: 60px;
+    max-height: 60px;
+    background-color: white;
+    border: 0px;
+}
+
+.containerFrases {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

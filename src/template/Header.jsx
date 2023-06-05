@@ -6,6 +6,7 @@ import bandeiraEua from './../assets/bandeiraEua.png'
 export default function Header() {
     return (
         <header className='header'>
+            <div className='logoFooter'>AgendaPedro</div>
             <div className='linguagens'>
                 <img src={bandeiraBrasil} alt="BR" style={{ width: '40px', height: '24px'}}/>
                 <img src={bandeiraEua} alt="US" style={{width: '40px', height:'24px'}}/>

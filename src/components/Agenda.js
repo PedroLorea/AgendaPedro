@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Todo from '../pages/Todo';
 import PostIt from '../pages/PostIt';
-import Calendario from '../pages/Calendario';
+import Frases from '../pages/Frases';
 import Objetivos from '../pages/Objetivos';
 import Nav from '../template/Nav';
 import Main from '../template/Main';
@@ -18,8 +18,8 @@ export default function Agenda() {
                 <Routes>
                     <Route path='/todo' Component={Todo} />
                     <Route path='/postit' Component={PostIt} />
-                    <Route path='/calendario' Component={Calendario} />
                     <Route path='/objetivos' Component={Objetivos} />
+                    <Route path='/frases' Component={Frases} />
                 </Routes>
             </Main>
         </Router>

@@ -43,7 +43,7 @@ export default function Todo() {
 
     return (
         <div className="containerList">
-            <button className="buttonCriar" onClick={criarItem}>Criar Novo Item</button>
+            <button className="buttonCriar" onClick={criarItem}>Criar Tarefa</button>
 
             <input type="text" id="input-item"></input>
 

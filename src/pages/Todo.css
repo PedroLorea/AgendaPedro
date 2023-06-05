@@ -32,6 +32,7 @@
     font-size: 20px;
     cursor: pointer;
     margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .botaoPagina:hover {
@@ -43,7 +44,11 @@
 }
 
 li {
-    font-size: 20px;
+    min-width: 600px;
+    font-size: 30px;
+    background-color: #7eb6ef;
+    border: 1px solid black;
+    margin: 3px 0px;
 }
 
 #input-item {

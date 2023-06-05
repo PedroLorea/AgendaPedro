@@ -2,11 +2,10 @@
     display: grid;
     height: 100vh;
 
-    grid-template-rows: 70px 1fr 70px;
+    grid-template-rows: 70px 1fr;
     grid-template-areas:
         "header"
-        "main"
-        "footer";
+        "main";
 }
 
 header.header {

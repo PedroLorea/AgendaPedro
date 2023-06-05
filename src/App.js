@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import Agenda from './components/Agenda'
 import Home from './components/Home'
 import Header from './template/Header'
-import Footer from './template/Footer'
 import './App.css';
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
       <Header></Header>
       {showHome && <Home showAgenda={handleShowAgenda}/>}
       {showAgenda && <Agenda />}
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
