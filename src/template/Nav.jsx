@@ -5,6 +5,7 @@ import ChecklistIcon from '@mui/icons-material/Checklist';
 import PostAddOutlinedIcon from '@mui/icons-material/PostAddOutlined';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Nav() {
     return (
@@ -21,6 +22,8 @@ export default function Nav() {
 
 
             <Link className="link" to="/frases"><div><ElectricBoltIcon fontSize="large"/> <span>Frases</span></div></Link>
+
+            <Link className="link" to="/"><div><LogoutIcon fontSize="large"/> <span>Sair</span></div></Link>
 
 
         </nav>

@@ -12,7 +12,8 @@ export default function PostIt() {
     useEffect(() => {
         const unsubscribe = getPostIts((updatedPostIt) => {
           setPostIts(updatedPostIt)
-        })
+          console.log("At PostIt: " + updatePostIt.texto)
+        })         
         
         return () => {
           unsubscribe()

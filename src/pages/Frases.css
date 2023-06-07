@@ -5,8 +5,23 @@
     border: 0px;
 }
 
+.flechaEsquerda{
+    margin-right: 30px;
+}
+
+.flechaDireita{
+    margin-left: 30px;
+}
+
 .containerFrases {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
+}
+ 
+.frase {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

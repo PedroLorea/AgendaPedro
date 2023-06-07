@@ -1,0 +1,89 @@
+.objetivo{
+    grid-area: objetivo;
+    position: relative;
+    font-size: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.inputObjetivo {
+    width: 840px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.containerObjetivo{
+    display: grid;
+    grid-template-rows: 160px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "objetivo objetivo"
+        "impedeFazer vouFazer";
+}
+
+.impedeFazer{
+    grid-area: impedeFazer;
+    border-radius: 18px;
+    margin: 10px 80px;
+}
+
+.vouFazer{
+    grid-area: vouFazer;
+    border-radius: 18px;
+    margin: 10px 80px;
+    display: inline-block;
+}
+
+.vouFazerBarraSuperior{
+    font-size: 32px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerObjetivo{
+    width: 100%;
+}
+
+.containerObjetivo input{
+    width: 100%;
+    font-size: 30px;
+    margin-right: 6px;
+    background-color: #7eb6ef;
+    box-sizing: border-box;
+}
+
+.textObjetivo {
+    resize: none;
+    width: 100%;
+    font-size: 25px;
+    box-sizing: border-box;
+    background-color: #a6cff8;
+    overflow: hidden;
+}
+
+.vouFazer textarea:last-child,
+.impedeFazer textarea:last-child{
+    border-radius: 0 0 9px 9px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.botoesObjetivo{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.botoesObjetivo button{
+    font-size: 20px;
+    padding: 5px 15px;
+    margin-left: 5px;
+}

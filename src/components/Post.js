@@ -19,7 +19,7 @@ export default function Post({ id, onDelete, onUpdate }) {
       <div className="barraSuperior">
         <button className="botaoX" onClick={handleClick}>X</button>
       </div>
-      <textarea className="postIt" value={localStorage.getItem('TEXTO')} onChange={handleChange}></textarea>
+      <textarea className="postIt" value={text} onChange={handleChange}></textarea>
     </div>
   );
 }

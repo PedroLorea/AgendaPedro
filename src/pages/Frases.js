@@ -9,7 +9,7 @@ export default function Frases() {
             <button className="flechaEsquerda">
                 <img src={flechaEsquerda} alt="Seta para esquerda" style={{width: '40px', height: '40px'}}/>
             </button>
-            <div>
+            <div className="frase">
                 <h1>A preocupação deve nos levar a ação, não a depressão.</h1>
                 <p>- Pitágoras</p>
             </div>

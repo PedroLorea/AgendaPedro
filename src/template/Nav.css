@@ -37,3 +37,7 @@ nav div:active {
 nav div span {
     margin-left: 10px;
 }
+
+.link:last-child {
+    
+}

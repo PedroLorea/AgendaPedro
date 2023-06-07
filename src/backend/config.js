@@ -17,8 +17,7 @@ const postCollectionRef = collection(db, "PostIts")
 export const getPostIts = (callback) => {
   return onSnapshot(postCollectionRef, (snapshot) => {
     const updatedPostIts = snapshot.docs.map((doc) => {
-      console.log(doc.data().texto)
-      //localStorage.setItem('TEXTO', doc.data().texto)
+      console.log("At config.ts:" + doc.data().texto)
       return {
         id: doc.id,
         texto: doc.data().texto
