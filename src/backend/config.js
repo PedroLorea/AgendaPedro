@@ -14,6 +14,7 @@ const firebaseApp = initializeApp({
 const db = getFirestore(firebaseApp);
 const postCollectionRef = collection(db, "PostIts")
 
+
 export const getPostIts = (callback) => {
   return onSnapshot(postCollectionRef, (snapshot) => {
     const updatedPostIts = snapshot.docs.map((doc) => {

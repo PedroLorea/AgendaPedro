@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react"
 import Post from './../components/Post'
 import './PostIt.css'
 
-import { createPostIt, deletePostIt, getPostIts, updatePostIt } from "../backend/config"
+import { createPostIt, deletePostIt, updatePostIt, getPostIts} from "../backend/config"
 
 export default function PostIt() {
 
     const [postIts, setPostIts] = useState([])
 
-    
+
     useEffect(() => {
         const unsubscribe = getPostIts((updatedPostIt) => {
           setPostIts(updatedPostIt)
-          console.log("At PostIt: " + updatePostIt.texto)
         })         
         
         return () => {
@@ -47,7 +46,7 @@ export default function PostIt() {
             <button className="criarPost" onClick={criarPostIt}>+ Post-It</button>
             <div id="containerPosts">
                 {postIts.map(postIt => {
-                    return <Post key={postIt.id} id={postIt.id} onDelete={excluirPostIt} onUpdate={atualizarPostIt} texto={postIt.texto}/>
+                    return <Post key={postIt.id} id={postIt.id} onDelete={excluirPostIt} onUpdate={atualizarPostIt} texto={postIt.texto} />
                 })}
             </div>
         </div>

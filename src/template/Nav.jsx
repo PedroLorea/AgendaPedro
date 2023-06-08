@@ -11,19 +11,25 @@ export default function Nav() {
     return (
         <nav className="nav">
 
+            <div className="align-items-start">
 
-            <Link className="link" to="/todo"><div><ChecklistIcon fontSize="large"/><span>To-do</span></div></Link>
-
-
-            <Link className="link" to="/postit"><div><PostAddOutlinedIcon fontSize="large"/> <span>Post-it</span></div></Link>
+                <Link className="link" to="/todo"><div><ChecklistIcon fontSize="large" /><span>To-do</span></div></Link>
 
 
-            <Link className="link" to="/objetivos"><div><SportsScoreIcon fontSize="large"/> <span>Objetivos</span></div></Link>
+                <Link className="link" to="/postit"><div><PostAddOutlinedIcon fontSize="large" /> <span>Post-it</span></div></Link>
 
 
-            <Link className="link" to="/frases"><div><ElectricBoltIcon fontSize="large"/> <span>Frases</span></div></Link>
+                <Link className="link" to="/objetivos"><div><SportsScoreIcon fontSize="large" /> <span>Objetivos</span></div></Link>
 
-            <Link className="link" to="/"><div><LogoutIcon fontSize="large"/> <span>Sair</span></div></Link>
+
+                <Link className="link" to="/frases"><div><ElectricBoltIcon fontSize="large" /> <span>Frases</span></div></Link>
+            </div>
+
+            <div className="align-items-end">
+
+                <Link className="link" to="/"><div><LogoutIcon fontSize="large" /> <span>Sair</span></div></Link>
+            </div>
+
 
 
         </nav>

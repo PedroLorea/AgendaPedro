@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import './../styles/Post.css';
 
-export default function Post({ id, onDelete, onUpdate }) {
-  const [text, setText] = useState(""); // Estado para armazenar o texto do Post It
+export default function Post({ id, onDelete, onUpdate, texto }) {
 
   const handleClick = () => {
     onDelete(id);
@@ -10,7 +9,6 @@ export default function Post({ id, onDelete, onUpdate }) {
 
   const handleChange = (event) => {
     const newText = event.target.value;
-    setText(newText); // Atualiza o estado com o novo texto
     onUpdate(id, { texto: newText });
   };
 
@@ -19,7 +17,7 @@ export default function Post({ id, onDelete, onUpdate }) {
       <div className="barraSuperior">
         <button className="botaoX" onClick={handleClick}>X</button>
       </div>
-      <textarea className="postIt" value={text} onChange={handleChange}></textarea>
+      <textarea className="postIt" value={texto} onChange={handleChange}></textarea>
     </div>
   );
 }
