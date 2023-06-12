@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import './Todo.css'
+import { createToDo, getToDo } from "../backend/config"
 
 export default function Todo() {
 
@@ -14,6 +15,18 @@ export default function Todo() {
     const handlePageChange = (pageNumber) => {
         setNumeroPagina(pageNumber)
     }
+
+
+    useEffect(() => {
+        const unsubscribe = getToDo((updatedToDo) => {
+          setListaItens(updatedToDo)
+        })         
+        
+        return () => {
+          unsubscribe()
+        }
+      }, [])
+
 
     useEffect(() => {
         const inicio = (numeroPagina - 1) * itensPorPagina // inicio da lista
@@ -35,10 +48,13 @@ export default function Todo() {
 
     }, [listaItens, numeroPagina])
 
-    const criarItem = () => {
-        const item = document.getElementById('input-item')
-        setListaItens([...listaItens, item.value])
-        item.value = ''
+    const criarItem = async () => {
+    
+        const novoItem = {
+            id: Math.random(),
+            tarefa: document.getElementById('input-item').value
+        }
+        await createToDo(novoItem)
     }
 
     return (
@@ -49,7 +65,7 @@ export default function Todo() {
 
             <ul>
                 {itens.map(item => {
-                    return <li>{item}</li>
+                    return <li>{item.tarefa}</li>
                 })}
             </ul>
             <div> {pageButtons} </div>
