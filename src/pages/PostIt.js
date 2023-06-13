@@ -23,7 +23,7 @@ export default function PostIt() {
     const criarPostIt = async () => {
         if (postIts.length < 4) {
             const novoPostIt = {
-                id: Math.random(),
+                timestamp: new Date(),
                 texto: ""
             }
             await createPostIt(novoPostIt)
