@@ -8,9 +8,9 @@ export default function Home(props) {
         <div className="logoHome">
           AgendaPedro
         </div>
-        <button className="buttonEntrar" onClick={props.showAgenda}>
-          ENTRAR
-        </button>
+          <button className="buttonEntrar" onClick={props.showAgenda}>
+            ENTRAR
+          </button>
       </div>
     </div>
   )

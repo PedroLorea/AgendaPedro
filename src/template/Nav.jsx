@@ -7,7 +7,8 @@ import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
 import LogoutIcon from '@mui/icons-material/Logout';
 
-export default function Nav() {
+export default function Nav(props) {
+
     return (
         <nav className="nav">
 
@@ -27,7 +28,7 @@ export default function Nav() {
 
             <div className="align-items-end">
 
-                <Link className="link" to="/"><div><LogoutIcon fontSize="large" /> <span>Sair</span></div></Link>
+                <Link className="link" to="/"> <div onClick={props.showHome}><LogoutIcon fontSize="large" /> <span>Sair</span> </div> </Link>
             </div>
 
 

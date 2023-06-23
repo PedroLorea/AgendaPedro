@@ -76,3 +76,27 @@ export const getToDo = (callback) => {
     callback(updatedToDo)
   })
 }
+
+
+// FRASES
+
+const frasesCollectionRef = collection(db, "Frases");
+const frases = []
+
+export function getFrases(callback) {
+  return onSnapshot(query(frasesCollectionRef, orderBy('id')), (snapshot) => {
+
+    snapshot.forEach((doc) => {
+      frases.push(doc.data())
+    })
+    callback(frases)
+  })
+
+}
+
+export function obterProximaFrase(idAtual){
+  const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
+  const proximoIndex = indexAtual + 1
+
+  if(proximoIndex >= 0 && proximoIndex < frases.length) return frases[proximoIndex]
+}

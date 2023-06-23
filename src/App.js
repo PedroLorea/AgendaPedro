@@ -14,12 +14,16 @@ function App() {
     setShowAgenda(true)
   }
 
+  const handleShowHome = () => {
+    setShowHome(true)
+    setShowAgenda(false)
+  }
+
   return (
     <div className='app'>
       <Header></Header>
       {showHome && <Home showAgenda={handleShowAgenda}/>}
-      {showAgenda && <Agenda />}
-      {/* <Footer></Footer> */}
+      {showAgenda && <Agenda showHome={handleShowHome}/>}
     </div>
   );
 }

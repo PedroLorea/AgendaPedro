@@ -8,12 +8,12 @@ import Main from '../template/Main';
 import './../styles/Agenda.css'
 
 
+export default function Agenda(props) {
 
-export default function Agenda() {
     return (
         <div className='containerAgenda'>
         <Router>
-            <Nav className="navAgenda"/>
+            <Nav className="navAgenda" {...props}/>
             <Main className="mainAgenda">
                 <Routes>
                     <Route path='/todo' Component={Todo} />
