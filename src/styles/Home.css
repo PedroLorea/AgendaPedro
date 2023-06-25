@@ -4,6 +4,7 @@
   height: 500px;
   background-color: rgb(255, 255, 255);
 
+  margin-top: 33px;
   align-items: center;
   flex-direction: column;
   border-radius: 5%;

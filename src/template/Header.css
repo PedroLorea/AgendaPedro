@@ -22,4 +22,7 @@ img{
   padding-top: 12px;
   padding-left: 30px;
   font-weight: bold;
+  
+  pointer-events: none;
+  user-select: none;
 }

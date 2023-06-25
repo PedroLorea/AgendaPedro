@@ -57,3 +57,21 @@ li {
     min-width: 600px;
     margin: 10px;
 }
+
+.liTarefa {
+    display: flex;
+}
+
+.lataRemover {
+    background-color: #288cef;
+    margin-top: 4px;
+    margin-left: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    padding-top: 4px;
+}
+
+.lataRemover:active {
+    background-color: #0056b3;
+}

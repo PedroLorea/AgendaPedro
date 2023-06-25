@@ -61,7 +61,7 @@ export const createToDo = async (toDoData) => {
   try{
     await addDoc(toDoCollectionRef, toDoData)
   } catch (error) {
-    console.error("Error adding post it:", error);
+    console.error("Error adding post it:", error)
   }
 }
 
@@ -77,6 +77,16 @@ export const getToDo = (callback) => {
   })
 }
 
+export const removeTodo = async (id) => {
+  try {
+    const toDoDocRef = doc(db, "Todo", id);
+    await deleteDoc(toDoDocRef, id)
+  } catch (error) {
+    console.error("Error deleting post it:", error)
+  }
+
+}
+
 
 // FRASES
 
@@ -88,15 +98,23 @@ export function getFrases(callback) {
 
     snapshot.forEach((doc) => {
       frases.push(doc.data())
+      console.log(doc.data())
     })
     callback(frases)
   })
 
 }
 
+export function obterFraseAnterior(idAtual){
+  const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
+  const anteriorIndex = indexAtual - 1
+
+  if(anteriorIndex >= 0 && anteriorIndex < frases.length) return frases[anteriorIndex]
+}
+
 export function obterProximaFrase(idAtual){
   const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
   const proximoIndex = indexAtual + 1
 
-  if(proximoIndex >= 0 && proximoIndex < frases.length) return frases[proximoIndex]
+  if(proximoIndex >= 0 && proximoIndex <= frases.length) return frases[proximoIndex]
 }

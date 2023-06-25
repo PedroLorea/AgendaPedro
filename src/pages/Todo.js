@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import './Todo.css'
 import { createToDo, getToDo } from "../backend/config"
+import DeleteIcon from '@mui/icons-material/Delete';
+import { removeTodo } from "../backend/config";
 
 export default function Todo() {
 
@@ -61,6 +63,10 @@ export default function Todo() {
 
     }
 
+    const removeItem = async (id) => {
+        await removeTodo(id)
+    }
+
     return (
         <div className="containerList">
             <button className="buttonCriar" onClick={criarItem}>Criar Tarefa</button>
@@ -69,7 +75,10 @@ export default function Todo() {
 
             <ul>
                 {itens.map(item => {
-                    return <li>{item.tarefa}</li>
+                    return <div key={item.id} className="liTarefa">
+                        <li>{item.tarefa}</li>
+                        <DeleteIcon className="lataRemover" fontSize="large" onClick={() => removeItem(item.id)}/>
+                        </div>
                 })}
             </ul>
             <div> {pageButtons} </div>
