@@ -58,7 +58,16 @@
     box-sizing: border-box;
 }
 
-.textObjetivo {
+.textObjetivoImpede {
+    resize: none;
+    width: 100%;
+    font-size: 25px;
+    box-sizing: border-box;
+    background-color: #a6cff8;
+    overflow: hidden;
+}
+
+.textObjetivoFazer {
     resize: none;
     width: 100%;
     font-size: 25px;

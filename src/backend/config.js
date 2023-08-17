@@ -118,3 +118,17 @@ export function obterProximaFrase(idAtual){
 
   if(proximoIndex >= 0 && proximoIndex <= frases.length) return frases[proximoIndex]
 }
+
+
+//OBJETIVOS
+
+const objetivosCollectionRef = collection(db, "Objetivos");
+
+export const createObjective = async (objetivo) => {
+  try {
+    await addDoc(objetivosCollectionRef, objetivo)
+  }
+  catch(error){
+    console.log('Erro ao adicionar Objetivo' + error)
+  }
+}
