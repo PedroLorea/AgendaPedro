@@ -1,6 +1,6 @@
 .home {
   display: flex;
-  width: 600px;
+  width: 990px;
   height: 500px;
   background-color: rgb(255, 255, 255);
 
@@ -15,9 +15,12 @@
 }
 
 .logoHome {
-  font-size: 80px;
+  font-size: 110px;
+  font-style: italic;
   color: red;
   margin-bottom: 45px;
+  pointer-events: none;
+  user-select: none;
 }
 
 .buttonEntrar {
@@ -28,6 +31,7 @@
   padding: 10px 100px;
   border-radius: 25px;
   cursor: pointer;
+  border: 1px solid black;
 }
 
 .buttonEntrar:hover {

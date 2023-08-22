@@ -1,7 +1,12 @@
 import './../styles/Home.css';
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 export default function Home(props) {
+  const { t } = useTranslation()
+
+
+
   return (
     <div className='containerHome'>
       <div className="home">
@@ -9,7 +14,7 @@ export default function Home(props) {
           AgendaPedro
         </div>
           <button className="buttonEntrar" onClick={props.showAgenda}>
-            ENTRAR
+            {t('ENTRAR')}
           </button>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { collection, getFirestore, addDoc, deleteDoc, doc, updateDoc, onSnapshot } from "firebase/firestore";
-import { query, orderBy } from "firebase/firestore";
+import { collection, getFirestore, addDoc, deleteDoc, doc, updateDoc, onSnapshot, getDocs } from "firebase/firestore";
+import { query, orderBy, where } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -132,3 +132,43 @@ export const createObjective = async (objetivo) => {
     console.log('Erro ao adicionar Objetivo' + error)
   }
 }
+
+export const getObjetivoBack = async (id) => {
+  try {
+    const querySnapshot = await getDocs(objetivosCollectionRef);
+    let objetivoEncontrado = null
+
+    querySnapshot.forEach((doc) => {
+      const objetivo = doc.data();
+      if (objetivo.id === id) {
+        objetivoEncontrado = objetivo
+      }
+    });
+
+    return objetivoEncontrado
+  } catch (error) {
+    console.log('Erro ao buscar Objetivo: ' + error);
+  }
+};
+
+
+export const updateObjective = async (objetivo) => {
+  const objetivosCollectionRef = collection(db, "Objetivos");
+  
+  const q = query(objetivosCollectionRef, where("id", "==", objetivo.id));
+  
+  const querySnapshot = await getDocs(q);
+  
+  if (!querySnapshot.empty) {
+    const objetivoDocRef = doc(db, "Objetivos", querySnapshot.docs[0].id);
+    await updateDoc(objetivoDocRef, {
+      titulo: objetivo.titulo,
+    dadosFazer: objetivo.dadosFazer,
+    dadosImpede: objetivo.dadosImpede
+    });
+  } else {
+    console.log("Nenhum objetivo encontrado com o nome fornecido.");
+  }
+}
+
+

@@ -3,8 +3,11 @@ import './Todo.css'
 import { createToDo, getToDo } from "../backend/config"
 import DeleteIcon from '@mui/icons-material/Delete';
 import { removeTodo } from "../backend/config";
+import { useTranslation } from "react-i18next";
 
 export default function Todo() {
+
+    const {t} = useTranslation()
 
     const [listaItens, setListaItens] = useState([])
     const [numeroPagina, setNumeroPagina] = useState(1)
@@ -69,7 +72,7 @@ export default function Todo() {
 
     return (
         <div className="containerList">
-            <button className="buttonCriar" onClick={criarItem}>Criar Tarefa</button>
+            <button className="buttonCriar" onClick={criarItem}>{t('Criar Tarefa')}</button>
 
             <input type="text" id="input-item"></input>
 
