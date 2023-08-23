@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Agenda Pedro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![TelaInicial](https://github.com/PedroLorea/AgendaPedro/assets/101357140/ec5919a1-1d07-4f49-852b-e0ae05ac210c)
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+O Agenda Pedro foi desenvolvido no Framework: React. Utilizando Javacript, HTML e CSS.
+O banco de dados que é utilizado para armazenar as informações é o Firestore da Firebase.
+Para realizar as traduções foi disposto o Framework i18next.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### To-do
+O usuário escreve no input e clicar em "Criar Tarefa". A tarefa criada irá para o final da lista. O usuário pode excluir individualmente clicando na lata de lixo ao lado de cada tarefa.
 
-### `npm test`
+![Todo](https://github.com/PedroLorea/AgendaPedro/assets/101357140/f1bfd25a-14a6-433f-a0af-3526dc60294c)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Post-it
+O usuário dispõe-se de um botão +Post-it que vai adicionando até 4 post-it no total. E pode excluir individualmente cada.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Postit](https://github.com/PedroLorea/AgendaPedro/assets/101357140/c3252403-6d96-4454-9ddd-6b97b7409d38)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Objetivos
+Essa aba tem como meta o usuário entender melhor sobre seus objetivos. É possível ter até 3 objetivos, no qual cada um, tem as colunas de "O que me Impede" e "O que vou fazer".
 
-### `npm run eject`
+![Objetivos](https://github.com/PedroLorea/AgendaPedro/assets/101357140/f27c76ab-8cac-44bf-84e0-602b6d2972f9)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frases
+São frases que estão armazenadas no banco de dados que aparecem sequencialmente conforme o usuário clica nas flechas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Frases](https://github.com/PedroLorea/AgendaPedro/assets/101357140/ac1921ea-8658-4bf9-a039-c10943189165)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Trocar Idioma
+As duas linguagens disponíveis na agenda são: Português e Inglês. No topo da página, a qualquer momento e em qualquer página, o usuário pode clicar na bandeira do país e alterar o idioma.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Blank 5 Grids Collage](https://github.com/PedroLorea/AgendaPedro/assets/101357140/b2e11cf3-085e-4325-8fdf-e54668a661c8)
