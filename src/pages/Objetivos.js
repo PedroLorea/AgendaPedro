@@ -42,7 +42,7 @@ export default function Objetivos() {
 
 
     const updateObjetivo = async () => {
-        const textObjetivosImpede = document.querySelectorAll('.textObjetivoFazer')
+        const textObjetivosImpede = document.querySelectorAll('.textObjetivoImpede')
         const dadosImpede = []
 
         textObjetivosImpede.forEach(texto => {
@@ -50,7 +50,7 @@ export default function Objetivos() {
         })
 
 
-        const textObjetivosFazer = document.querySelectorAll('.textObjetivoImpede')
+        const textObjetivosFazer = document.querySelectorAll('.textObjetivoFazer')
         const dadosFazer = []
 
         textObjetivosFazer.forEach(texto => {

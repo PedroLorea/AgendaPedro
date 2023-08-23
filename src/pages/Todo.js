@@ -15,7 +15,7 @@ export default function Todo() {
     const [itens, setItens] = useState([])
     const [pageButtons, setPageButtons] = useState([])
 
-    const itensPorPagina = 8
+    const itensPorPagina = 7
 
     const handlePageChange = (pageNumber) => {
         setNumeroPagina(pageNumber)
