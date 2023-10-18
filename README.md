@@ -34,7 +34,7 @@ São frases que estão armazenadas no banco de dados que aparecem sequencialment
 
 ![Frases](https://github.com/PedroLorea/AgendaPedro/assets/101357140/ac1921ea-8658-4bf9-a039-c10943189165)
 
-### Trocar Idioma
+### Alterar Idioma
 As duas linguagens disponíveis na agenda são: Português e Inglês. No topo da página, a qualquer momento e em qualquer página, o usuário pode clicar na bandeira do país e alterar o idioma.
 
 ![Blank 5 Grids Collage](https://github.com/PedroLorea/AgendaPedro/assets/101357140/b2e11cf3-085e-4325-8fdf-e54668a661c8)
