@@ -41,6 +41,7 @@ export default function Todo() {
         setItens(itensPaginados)
 
         const totalPaginas = Math.ceil(listaItens.length / itensPorPagina) //Quantas paginas tem, arredonda pra cima
+        
         const pageButtonsPaginado = []
 
         for (let i = 1; i <= totalPaginas; i++) {
@@ -54,27 +55,48 @@ export default function Todo() {
     }, [listaItens, numeroPagina])
 
     const criarItem = async () => {
-    
         const novoItem = {
-            timestamp: new Date(),
-            tarefa: document.getElementById('input-item').value
-        }
+          timestamp: new Date(),
+          tarefa: document.getElementById('input-item').value,
+        };
+    
+        document.getElementById('input-item').value = '';
         
-        document.getElementById('input-item').value = "";
-
-        await createToDo(novoItem)
-
-    }
+        const totalItens = listaItens.length + 1; 
+        const novaPagina = Math.ceil(totalItens / itensPorPagina);
+        
+        if (numeroPagina !== novaPagina) {
+            setNumeroPagina(novaPagina);
+        }
+        await createToDo(novoItem);
+    };
 
     const removeItem = async (id) => {
+        
+        const updatedList = listaItens.filter(item => item.id !== id);
+        setListaItens(updatedList);
+        
+        const totalItens = updatedList.length;
+        const totalPaginas = Math.ceil(totalItens / itensPorPagina);
+        
+        if (itens.length === 1 && numeroPagina > 1) {
+            setNumeroPagina(numeroPagina - 1);
+        }
+
         await removeTodo(id)
     }
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          criarItem();
+        }
+    };
 
     return (
         <div className="containerList">
             <button className="buttonCriar" onClick={criarItem}>{t('Criar Tarefa')}</button>
 
-            <input type="text" id="input-item"></input>
+            <input type="text" id="input-item" onKeyDown={handleKeyDown}></input>
 
             <ul>
                 {itens.map(item => {
