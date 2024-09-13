@@ -109,6 +109,7 @@ export function obterProximaFrase(idAtual){
   const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
   const proximoIndex = indexAtual + 1
 
+  if(proximoIndex >= frases.length) return frases[0]
   if(proximoIndex >= 0 && proximoIndex <= frases.length) return frases[proximoIndex]
 }
 

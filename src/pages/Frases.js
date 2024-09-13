@@ -28,24 +28,13 @@ export default function Frases() {
   }, [t]);
   
   function trocarProximaFrase() {
-    if(primeiro === false ){
-      const proximaFrase = obterProximaFrase(0);
+    const proximaFrase = obterProximaFrase(fraseAtual.id);
+    if (proximaFrase) {
       setFraseAtual(proximaFrase);
       const fraseElement = document.getElementById('frase');
       const autorElement = document.getElementById('autor');
       fraseElement.innerText = t(proximaFrase.frase);
       autorElement.innerText = `- ${t(proximaFrase.autor)}`;
-      primeiro = true;
-    }
-    else {
-      const proximaFrase = obterProximaFrase(fraseAtual.id);
-      if (proximaFrase) {
-        setFraseAtual(proximaFrase);
-        const fraseElement = document.getElementById('frase');
-        const autorElement = document.getElementById('autor');
-        fraseElement.innerText = t(proximaFrase.frase);
-        autorElement.innerText = `- ${t(proximaFrase.autor)}`;
-      }
     }
   }
   
