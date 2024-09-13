@@ -105,13 +105,6 @@ export function getFrases(callback) {
 
 }
 
-export function obterFraseAnterior(idAtual){
-  const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
-  const anteriorIndex = indexAtual - 1
-
-  if(anteriorIndex >= 0 && anteriorIndex < frases.length) return frases[anteriorIndex]
-}
-
 export function obterProximaFrase(idAtual){
   const indexAtual = frases.findIndex((doc) => doc.id === idAtual)
   const proximoIndex = indexAtual + 1

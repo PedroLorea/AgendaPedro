@@ -27,20 +27,6 @@ export default function Frases() {
     };
   }, [t]);
   
-  
-  function trocarFraseAnterior(){
-    if(fraseAtual){
-      const fraseAnterior = obterFraseAnterior(fraseAtual.id)
-      if(fraseAnterior) {
-        setFraseAtual(fraseAnterior);
-        const fraseElement = document.getElementById('frase');
-        const autorElement = document.getElementById('autor');
-        fraseElement.innerText = t(fraseAnterior.frase);
-        autorElement.innerText = `- ${t(fraseAnterior.autor)}`;
-      }
-    }
-  }
-  
   function trocarProximaFrase() {
     if(primeiro === false ){
       const proximaFrase = obterProximaFrase(0);
@@ -66,11 +52,8 @@ export default function Frases() {
   
   return (
     <div className="containerFrases">
-            <button className="flechaEsquerda" onClick={trocarFraseAnterior}>
-                <img src={flecha} alt="Seta para esquerda" style={{width: '40px', height: '40px'}}/>
-            </button>
             <div className="fraseContainer">
-                <h1 id="frase">{t('Clique nas flechas')}</h1>
+                <h1 id="frase">{t('Clique na seta')}</h1>
                 <p id="autor"></p>
             </div>
             <button className="flechaDireita rotacionar" onClick={trocarProximaFrase}>
