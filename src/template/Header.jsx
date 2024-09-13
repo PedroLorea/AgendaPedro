@@ -21,14 +21,14 @@ export default function Header() {
                     onClick={() => changeLanguage("pt-BR")} 
                     src={bandeiraBrasil} 
                     alt="BR" 
-                    style={{ width: '58px', height: '35px', opacity: selectedLanguage === "pt-BR" ? 1 : 0.6 
+                    style={{ width: '57px', height: '35px', opacity: selectedLanguage === "pt-BR" ? 1 : 0.6 
                     }}
                 />
                 <img 
                     onClick={() => changeLanguage("en-US")} 
                     src={bandeiraEua} 
                     alt="US" 
-                    style={{ width: '58px', height: '35px', opacity: selectedLanguage === "en-US" ? 1 : 0.6 
+                    style={{ width: '57px', height: '35px', opacity: selectedLanguage === "en-US" ? 1 : 0.6 
                     }}
                 />
             </div>
